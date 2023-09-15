@@ -25,7 +25,7 @@ const App = () => {
   useEffect(() => {
     const savedView = localStorage.getItem(GRID_VIEW_STORAGE_STRING);
     setCurrentView(savedView);
-    const savedCart = JSON.parse(localStorage.getItem(CART_STORAGE_STRING));
+    const savedCart = JSON.parse(localStorage.getItem(CART_STORAGE_STRING)) || [];
     setCart(savedCart);
     setCartItems(savedCart.length);
   }, []);
